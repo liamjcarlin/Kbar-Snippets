@@ -9,6 +9,8 @@
 • Scale Transform - Adjustment
 • Soryboard pComper
 • Shape Layer - Null
+• Guide Layer On
+• Guide Layer Off
 
 */
 
@@ -237,3 +239,10 @@ function shapeLayerNull() {
 
 
 shapeLayerNull();
+
+// Guide Layer On
+
+
+
+// Guide Layer Off
+
