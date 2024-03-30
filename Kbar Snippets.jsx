@@ -4,6 +4,8 @@
 
 //Contents
 
+This is all of the 
+
 • Default Project Folders
 • 15fps / Adjustment Layer / Posterize time.
 • Scale Transform - Adjustment
@@ -127,20 +129,20 @@ fifteenFramesPerSecond();
 
 //Storyboard pComper
 
-//LC_Storyboard Script v1//
+//LC_Storyboard pComper v1.0.0//
 
 /*
 This script will create a Storyboard pComp from selected layers for any size composition.
 
-• Select Layers (any) [x]
-• Pre-Compose Layers [x]
-• Name "Storyboard pComp [x]
-• Apply 'ADBE Tint' Effect [ ]
-• Scale to 33.3 [x]
-• Position TL of screen [x]
-• Opacity to 75% [x]
-• Apply Guide Layer [x]
-• 33.3% scale to 100% scale and is centered in the comp [x]
+• Select Layers (any)
+• Pre-Compose Layers
+• Name "Storyboard pComp
+• Apply 'ADBE Tint' Effect
+• Scale to 33.3
+• Position TL of screen
+• Opacity to 75%
+• Apply Guide Layer
+• 33.3% scale to 100% scale and is centered in the comp
 
 Notes:
 
