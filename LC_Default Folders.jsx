@@ -1,4 +1,4 @@
-//LC_Default Project Folders v1.0.0//
+//LC_Default Project Folders v1//
 
 function defaultProjectFolders() {
   
@@ -36,7 +36,7 @@ function defaultProjectFolders() {
     // Sub Folders
     var compsArchive = app.project.items.addFolder("_Archive");
     var pComps = app.project.items.addFolder("_pComps");
-    var tests = app.project.items.addFolder("Tests_");
+    var tests = app.project.items.addFolder("_Tests");
 
     // Parenting Comps //
 

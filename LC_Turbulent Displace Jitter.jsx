@@ -1,3 +1,5 @@
+//Turbulent Displace with Jitter
+
 function turbulentDisplaceEffectJitter() {
 
   app.beginUndoGroup("Undo Guide");
@@ -23,8 +25,8 @@ var effectsProperty = layer[i].property("ADBE Effect Parade"); //This is how you
 var turbulentDisplace = effectsProperty.addProperty("ADBE Turbulent Displace");
 var turbulentDisplacepIndex = turbulentDisplace.propertyIndex;
 //Accessing the effect properties
-var turbulentDisplaceAmount = effectsProperty.property(turbulentDisplacepIndex).property("ADBE Turbulent Displace-0001");
-var turbulentDisplaceSize = effectsProperty.property(turbulentDisplacepIndex).property("ADBE Turbulent Displace-0002");
+var turbulentDisplaceAmount = effectsProperty.property(turbulentDisplacepIndex).property("ADBE Turbulent Displace-0002");
+var turbulentDisplaceSize = effectsProperty.property(turbulentDisplacepIndex).property("ADBE Turbulent Displace-0003");
 var turbulentDisplaceComplexity = effectsProperty.property(turbulentDisplacepIndex).property("ADBE Turbulent Displace-0005");
 var turbulentDisplaceRandomSeed = effectsProperty.property(turbulentDisplacepIndex).property("ADBE Turbulent Displace-0010");
 var turbulentDisplacePinning = effectsProperty.property(turbulentDisplacepIndex).property("ADBE Turbulent Displace-0012");
