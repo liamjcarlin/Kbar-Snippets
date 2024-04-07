@@ -7,6 +7,10 @@ It animates from 0%-100% on the end path property. Mainly just how I use it. Wil
 
 */
 
+//Trim Paths to Shape Layer
+
+//Trim Paths to Shape Layer
+
 function addTrimPath() {
 
   app.beginUndoGroup("Undo Guide");
@@ -29,14 +33,15 @@ function tp(layer) {
 for (var i = 0; i < layer.length; i++) {
 
 //Trim Path Property
+var myLayer = app.project.activeItem.selectedLayers[i];
 var effectsProperty = layer[i].property("ADBE Root Vectors Group");
 var trimPath = effectsProperty.addProperty("ADBE Vector Filter - Trim");
 var trimPathEnd = trimPath.property("ADBE Vector Trim End");
 //Trim Path Keyframes
 var applyEaseIn = new KeyframeEase(0,66);
 var applyEaseOut = new KeyframeEase(0,66);
-trimPathEnd.addKey(0);
-trimPathEnd.addKey(3);
+trimPathEnd.setValueAtTime(myLayer.inPoint,0);
+trimPathEnd.setValueAtTime(myLayer.inPoint + 1.5,100);
 trimPathEnd.setValueAtKey(1,0);
 trimPathEnd.setValueAtKey(2,100);
 trimPathEnd.setTemporalEaseAtKey(1,[applyEaseIn],[applyEaseOut]);
