@@ -33,6 +33,7 @@ function tp(layer) {
 for (var i = 0; i < layer.length; i++) {
 
 //Trim Path Property
+var comp = app.project.activeItem;
 var myLayer = app.project.activeItem.selectedLayers[i];
 var effectsProperty = layer[i].property("ADBE Root Vectors Group");
 var trimPath = effectsProperty.addProperty("ADBE Vector Filter - Trim");
@@ -41,7 +42,7 @@ var trimPathEnd = trimPath.property("ADBE Vector Trim End");
 var applyEaseIn = new KeyframeEase(0,66);
 var applyEaseOut = new KeyframeEase(0,66);
 trimPathEnd.setValueAtTime(myLayer.inPoint,0);
-trimPathEnd.setValueAtTime(myLayer.inPoint + 1.5,100);
+trimPathEnd.setValueAtTime(myLayer.inPoint + 30 * comp.frameDuration,100);
 trimPathEnd.setValueAtKey(1,0);
 trimPathEnd.setValueAtKey(2,100);
 trimPathEnd.setTemporalEaseAtKey(1,[applyEaseIn],[applyEaseOut]);
