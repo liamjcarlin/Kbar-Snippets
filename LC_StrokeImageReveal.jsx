@@ -24,6 +24,8 @@ function turbulentDisplace(layer) {
 
 for (var i = 0; i < layer.length; i++) {
 
+var comp = app.project.activeItem;
+var myLayer = app.project.activeItem.selectedLayers[i];
 var effectsProperty = layer[i].property("ADBE Effect Parade"); //This is how you add effects to properties
 var strokeEffect = effectsProperty.addProperty("ADBE Stroke");
 var strokeEffectIndex = strokeEffect.propertyIndex;
@@ -39,8 +41,8 @@ strokePaintStyle.setValue(3);
 //Trim Path Keyframes
 var applyEaseIn = new KeyframeEase(0,66);
 var applyEaseOut = new KeyframeEase(0,66);
-strokeEnd.addKey(0);
-strokeEnd.addKey(3);
+strokeEnd.setValueAtTime(myLayer.inPoint,0);
+strokeEnd.setValueAtTime(myLayer.inPoint + 30 * comp.frameDuration,3);
 strokeEnd.setValueAtKey(1,0);
 strokeEnd.setValueAtKey(2,100);
 strokeEnd.setTemporalEaseAtKey(1,[applyEaseIn],[applyEaseOut]);
